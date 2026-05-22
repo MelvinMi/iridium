@@ -17,7 +17,7 @@ def process_line(line):
     if len(parts) > 5:
         timestamp_sdr = parts[2]
         frequence = parts[3]
-        confiance = parts[5]
+        confiance = parts[4]
 
         # Double horodatage (comme demandé dans le package)
 
@@ -41,7 +41,6 @@ def process_line(line):
 
 
 if __name__ == "__main__":
-    print("En attente de données live depuis le SDR...")
 
     for line in sys.stdin:
         process_line(line.strip())
